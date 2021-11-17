@@ -11,7 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>bot1</Name>
     <RootNamespace>bot1</RootNamespace>
-    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env|D:\MyProjects\pyLessonBot\bot2\bot2.pyproj</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,18 +28,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env1\">
-      <Id>env1</Id>
-      <Version>3.6</Version>
-      <Description>env1 (Python 3.6 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="requirements.txt" />
+    <InterpreterReference Include="MSBuild|env|D:\MyProjects\pyLessonBot\bot2\bot2.pyproj" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
